@@ -1,22 +1,9 @@
 # Hardware
 
--   [Logic gates](#logic-gates)
-    -   [Nand](#nand-gate)
-    -   [Invert](#inverter)
-    -   [And](#and-gate)
-    -   [Or](#or-gate)
-    -   [Xor](#xor-gate)
--   [Arithmetics](#arithmetics)
-    -   [Half Adder](#half-adder)
-    -   [Full Adder](#full-adder)
-    -   [Multi-Bit Adder](#multi-bit-adder)
-    -   [Increment](#increment)
-    -   [Subtraction](#subtraction)
-    -   [Equal to Zero](#equal-zero)
-    -   [Less than Zero](#less-zero)
--   [Switching](#switching)
-    -   [Selector](#selector)
-    -   [Switch](#switch)
+Logic Gates: [Nand](#nand-gate) - [Invert](#inverter) - [Invert](#inverter) - [And](#and-gate) - [Or](#or-gate) - [Xor](#xor-gate)  
+Arithmetics: [Half Adder](#half-adder) - [Full Adder](#full-adder) - [Multi-Bit Adder](#multi-bit-adder) - [Increment](#increment) - [Subtraction](#subtraction) - [Equal to Zero](#equal-zero) - [Less than Zero](#less-zero)  
+Switching: [Selector](#selector) - [Switch](#switch)  
+Arithmetic Logic Unit: [Logic Unit](#logic-unit) - [Arithmetic Unit](#arith-unit) - [ALU](#alu) - [Condition](#condition)
 
 <a name="logic-gates"></a>
 
@@ -113,3 +100,29 @@
 ### Switch
 
 ![](Solutions/Hardware/Switching/Switch.png)
+
+## Arithmetic Logic Unit
+
+<a name="logic-unit"></a>
+
+### Logic Unit
+
+![](Solutions/Hardware/ALU/LogicUnit.png)
+
+<a name="arith-unit"></a>
+
+### Arithmetic Unit
+
+![](Solutions/Hardware/ALU/ArithUnit.png)
+
+<a name="alu"></a>
+
+### ALU
+
+![](Solutions/Hardware/ALU/ALU.png)
+
+<a name="condition"></a>
+
+### Condition
+
+![](Solutions/Hardware/ALU/Condition.png)
