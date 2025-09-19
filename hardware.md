@@ -3,7 +3,8 @@
 Logic Gates: [Nand](#nand-gate) - [Invert](#inverter) - [Invert](#inverter) - [And](#and-gate) - [Or](#or-gate) - [Xor](#xor-gate)  
 Arithmetics: [Half Adder](#half-adder) - [Full Adder](#full-adder) - [Multi-Bit Adder](#multi-bit-adder) - [Increment](#increment) - [Subtraction](#subtraction) - [Equal to Zero](#equal-zero) - [Less than Zero](#less-zero)  
 Switching: [Selector](#selector) - [Switch](#switch)  
-Arithmetic Logic Unit: [Logic Unit](#logic-unit) - [Arithmetic Unit](#arith-unit) - [ALU](#alu) - [Condition](#condition)
+Arithmetic Logic Unit: [Logic Unit](#logic-unit) - [Arithmetic Unit](#arith-unit) - [ALU](#alu) - [Condition](#condition)  
+Memory: [SR Latch](#sr-latch) - [D Latch](#d-latch) - [Data Flip-Flop](#flip-flop) - [Register](#register) - [Counter](#counter) - [RAM](#ram)
 
 <a name="logic-gates"></a>
 
@@ -126,3 +127,41 @@ Arithmetic Logic Unit: [Logic Unit](#logic-unit) - [Arithmetic Unit](#arith-unit
 ### Condition
 
 ![](Solutions/Hardware/ALU/Condition.png)
+
+## Memory
+
+<a name="sr-latch"></a>
+
+### SR Latch
+
+![](Solutions/Hardware/Memory/SRLatch.png)
+
+<a name="d-latch"></a>
+
+### D Latch
+
+![](Solutions/Hardware/Memory/DLatch.png)
+
+<a name="flip-flop"></a>
+
+### Data Fip-Flop
+
+![](Solutions/Hardware/Memory/FlipFlop.png)
+
+<a name="register"></a>
+
+### Register
+
+![](Solutions/Hardware/Memory/Register.png)
+
+<a name="counter"></a>
+
+### Counter
+
+![](Solutions/Hardware/Memory/Counter.png)
+
+<a name="ram"></a>
+
+### RAM
+
+![](Solutions/Hardware/Memory/RAM.png)
