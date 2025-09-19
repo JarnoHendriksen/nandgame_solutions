@@ -4,7 +4,8 @@ Logic Gates: [Nand](#nand-gate) - [Invert](#inverter) - [Invert](#inverter) - [A
 Arithmetics: [Half Adder](#half-adder) - [Full Adder](#full-adder) - [Multi-Bit Adder](#multi-bit-adder) - [Increment](#increment) - [Subtraction](#subtraction) - [Equal to Zero](#equal-zero) - [Less than Zero](#less-zero)  
 Switching: [Selector](#selector) - [Switch](#switch)  
 Arithmetic Logic Unit: [Logic Unit](#logic-unit) - [Arithmetic Unit](#arith-unit) - [ALU](#alu) - [Condition](#condition)  
-Memory: [SR Latch](#sr-latch) - [D Latch](#d-latch) - [Data Flip-Flop](#flip-flop) - [Register](#register) - [Counter](#counter) - [RAM](#ram)
+Memory: [SR Latch](#sr-latch) - [D Latch](#d-latch) - [Data Flip-Flop](#flip-flop) - [Register](#register) - [Counter](#counter) - [RAM](#ram)  
+Processor: [Combined Memory](#combined-memory) - [ALU Instruction](#alu-instr) - [Control Selector](#control-selector) - [Control Unit](#control-unit) - [Computer](#computer) - [Input and Output](#io)
 
 <a name="logic-gates"></a>
 
@@ -165,3 +166,41 @@ Memory: [SR Latch](#sr-latch) - [D Latch](#d-latch) - [Data Flip-Flop](#flip-flo
 ### RAM
 
 ![](Solutions/Hardware/Memory/RAM.png)
+
+## Processor
+
+<a name="combined-memory"></a>
+
+### Combined Memory
+
+![](Solutions/Hardware/Processor/CombinedMemory.png)
+
+<a name="alu-instr"></a>
+
+### ALU Instruction
+
+![](Solutions/Hardware/Processor/ALUInstr.png)
+
+<a name="control-selector"></a>
+
+### Control Selector
+
+![](Solutions/Hardware/Processor/ControlSelector.png)
+
+<a name="control-unit"></a>
+
+### Control Unit
+
+![](Solutions/Hardware/Processor/ControlUnit.png)
+
+<a name="computer"></a>
+
+### Computer
+
+![](Solutions/Hardware/Processor/Computer.png)
+
+<a name="io"></a>
+
+### Input and Output
+
+![](Solutions/Hardware/Processor/IO.png)
