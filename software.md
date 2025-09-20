@@ -70,12 +70,18 @@ Low level: [Machine code](#machine-code) - [Assembly Language](#assembly) - [Ass
 
 ### Assembler Program
 
-```
-DEFINE lampAddr 0x7FFF
-
-A = lampAddr
+```Python
+# Set the value at the lamp's
+# address to 1 to turn bit 0 on
+A = 0x7FFF
 *A = 1
+
+# Set the value to 2 to turn
+# bit 0 off, and bit 1 on
 *A = *A + 1
+
+# Jump to the first instruction
+# to make the program loop indefinitely
 A = 0
 JMP
 ```
