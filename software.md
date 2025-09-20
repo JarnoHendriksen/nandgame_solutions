@@ -1,9 +1,11 @@
 # Software
 
-Low level: [Machine code](#machine-code) - [Assembly Language](#assembly) - [Assembler Program](#assembler)  
+Low level: [Machine code](#machine-code) - [Assembly Language](#assembly) - [Assembler Program](#assembler) - ~~Escape Labyrinth~~ - ~~Display~~ - ~~Network~~  
 Stack machine: [Init stack](#init-stack) - [Push D](#push-d) - [Pop D](#pop-d) - [Pop A](#pop-a) - [Push Value](#push-value) - [Push Static](#push-static) - [Pop Static](#pop-static) - [Push Memory](#push-memory) - [Pop Memory](#pop-memory)  
 Jumps: [Goto](#goto) - [If-goto](#if-goto)  
-Function calls: [Call](#call) - [Function](#function) - [Return](#return) - [Push argument](#push-argument) - [Pop argument](#pop-argument) - [add](#add) - [sub](#sub) - [negate](#negate) - [getChar](#getchar) - [putChar](#putchar)
+Function calls: [Call](#call) - [Function](#function) - [Return](#return) - [Push argument](#push-argument) - [Pop argument](#pop-argument) - [add](#add) - [sub](#sub) - [negate](#negate) - [getChar](#getchar) - [putChar](#putchar)  
+High-level language: [Tokenize](#tokenize) - [Grammar](#grammar) - [Code Generation](#code-gen)  
+Conditionals: [and](#and) - [or](#or) - [not](#not) - [equals](#equals)
 
 ## Low level
 
@@ -503,5 +505,154 @@ function putChar 0
 
     # Pop both, and store the value at the given address
     pop.memory
+return
+```
+
+## High-level language
+
+<a name="tokenize"></a>
+
+### Tokenize
+
+| Type    | Match  | Grammar | Token name |
+| ------- | ------ | ------- | ---------- |
+| Pattern | [ ]+   | Ignore  |            |
+| Pattern | [0-9]+ | Name    | Number     |
+| Exact   | +      | Literal |            |
+| Exact   | -      | Literal |            |
+| Exact   | \(     | Literal |            |
+| Exact   | \)     | Literal |            |
+
+<a name="grammar"></a>
+
+### Grammar
+
+`Expression -> Expression + Expression`  
+`Expression -> Expression - Expression`  
+`Expression -> ( Expression )`  
+`Expression -> - Expression`  
+`Expression -> Number`
+
+<a name="code-gen"></a>
+
+### Code generation
+
+#### `Expression -> Expression + Expression`
+
+```
+[Expression 1]
+[Expression 2]
+ADD
+```
+
+#### `Expression -> Expression - Expression`
+
+```
+[Expression 1]
+[Expression 2]
+SUB
+```
+
+#### `Expression -> ( Expression )`
+
+```
+[Expression]
+```
+
+#### `Expression -> - Expression`
+
+```
+[Expression]
+NEG
+```
+
+#### `Expression -> Number`
+
+```
+push.value [Number]
+```
+
+## Conditionals
+
+<a name="and"></a>
+
+### and
+
+```Python
+function and 0
+    push.argument 0
+    push.argument 1
+
+    pop.D
+    pop.A
+
+    D = D&A
+
+    push.D
+return
+```
+
+<a name="or"></a>
+
+### or
+
+```Python
+function or 0
+    push.argument 0
+    push.argument 1
+
+    pop.D
+    pop.A
+
+    D = D|A
+
+    push.D
+return
+```
+
+<a name="not"></a>
+
+### not
+
+```Python
+function not 0
+    push.argument 0
+
+    pop.D
+
+    D = ~D
+
+    push.D
+return
+```
+
+<a name="equals"></a>
+
+### equals
+
+```Python
+function equals 0
+    push.argument 0
+    push.argument 1
+
+    pop.D
+    pop.A
+
+    D = D-A
+
+    A = eq
+    D; JEQ
+
+    label neq:
+    push.value 0
+    A = ret
+    JMP
+
+    label eq:
+    A = -1
+    D = A
+    push.D
+
+    label ret:
 return
 ```
